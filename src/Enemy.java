@@ -20,8 +20,8 @@ public class Enemy {
         this.isBoss = boss;
 
         if (boss) {
-            width = 200;
-            height = 200;
+            width = 300;
+            height = 300;
             health = 20;
             sprite = new ImageIcon("resources/boss_red.png").getImage();
         } else {

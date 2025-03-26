@@ -1,10 +1,22 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
+import java.io.File;
 
 public class MainMenu extends JPanel {
+
+    private Image backgroundImage = Toolkit.getDefaultToolkit().createImage("resources/background.jpg");
+
     public MainMenu(GamePanel parent) {
+        MediaTracker tracker = new MediaTracker(this);
+        tracker.addImage(backgroundImage, 0);
+        try {
+            tracker.waitForID(0);
+        } catch (InterruptedException ignored) {}
+
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        setBackground(Color.BLACK);
+        setOpaque(false);
 
         JButton startButton = new JButton("Start Joc");
         JButton optionsButton = new JButton("Opțiuni");
@@ -28,7 +40,7 @@ public class MainMenu extends JPanel {
         });
 
         optionsButton.addActionListener(e -> {
-            JOptionPane.showMessageDialog(this, "Setările audio vor fi disponibile în curând!", "Opțiuni", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Audio settings will be available soon!", "Options", JOptionPane.INFORMATION_MESSAGE);
         });
 
         quitButton.addActionListener(e -> System.exit(0));
@@ -40,5 +52,13 @@ public class MainMenu extends JPanel {
         add(Box.createVerticalStrut(20));
         add(quitButton);
         add(Box.createVerticalGlue());
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        if (backgroundImage != null) {
+            g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+        }
     }
 }

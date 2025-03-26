@@ -12,11 +12,11 @@ public class GameWindow extends JFrame {
 
         GamePanel gamePanel = new GamePanel();
         add(gamePanel);
-        pack();
 
+        gamePanel.showMainMenu(); // ← Mutat aici, înainte de vizibilitate
+
+        pack();
         setLocationRelativeTo(null);
         setVisible(true);
-
-        gamePanel.showMainMenu();
     }
 }

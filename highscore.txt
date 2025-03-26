@@ -1,1 +1,1 @@
-Best Time: 7 sec
+Best Time: 5 sec
