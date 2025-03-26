@@ -26,7 +26,8 @@ Main menu:
 
 
 First Level:
-![image](https://github.com/user-attachments/assets/29694986-8d13-4ad6-beb4-17a6a4119c90)
+![image](https://github.com/user-attachments/assets/018d653b-b951-44be-875c-42aa1ba646fa)
+
 
 Final Level:
 ![image](https://github.com/user-attachments/assets/9804f80f-e100-4b30-a5af-7d1f8a2d46ca)
@@ -36,7 +37,8 @@ Upgrade:
 
 
 Game Over:
-![image](https://github.com/user-attachments/assets/48871883-aa3c-43e1-bdae-8fe0af08b391)
+![image](https://github.com/user-attachments/assets/758e2cdf-26fe-4074-85c0-42014c124249)
+
 
 Winning:
 ![image](https://github.com/user-attachments/assets/c220f092-0ce3-42d4-8e64-7fde0abdad00)
